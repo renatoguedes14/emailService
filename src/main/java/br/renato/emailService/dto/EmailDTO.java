@@ -4,9 +4,11 @@ import lombok.Data;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
+import java.util.List;
 
 @Data
-public class EmailDTO {
+public class EmailDTO implements Serializable {
 
 	@NotBlank
 	private String ownerRef;
@@ -20,4 +22,6 @@ public class EmailDTO {
 	private String subject;
 	@NotBlank
 	private String text;
+	private String company;
+	private List<String> employees;
 }

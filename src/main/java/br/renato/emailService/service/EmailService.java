@@ -18,7 +18,7 @@ public class EmailService {
 	private final EmailRepository emailRepository;
 	private final JavaMailSender mailSender;
 
-	public void sendEmail(Email email) {
+	public void sendEmail(final Email email) {
 		email.setSentDate(LocalDateTime.now());
 		try {
 			SimpleMailMessage message = new SimpleMailMessage();
